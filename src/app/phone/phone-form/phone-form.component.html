@@ -1,0 +1,44 @@
+<form #registerForm="ngForm">
+<table>
+    <tr>
+        <td>First Name</td>
+        <td>
+            <input [(ngModel)]="formData.firstname" name="firstname" type="text" class="form-control" id="firstname" required>
+        </td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>
+         <input [(ngModel)]="formData.lastname" name="lastname" type="text" class="form-control" id="lastname" required>
+        </td>
+        
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td>
+            <input [(ngModel)]="formData.phone" name="phone" type="text" class="form-control" id="phone" required [pattern]="mobNumberPattern">
+        </td>
+    </tr>
+    <div>
+        <button (click)="onSubmit()" type="submit" [disabled]= "!registerForm.form.valid">Submit</button>
+    </div>
+</table>
+</form>
+
+<div *ngFor="let item of PhoneBookList">
+    <table>
+    <tr>
+        <td>First Name</td>
+        <td>{{ item.firstnamelist }}</td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>{{ item.lastnamelist }}</td>
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td>{{ item.phonelist }}</td>
+    </tr>
+   </table>
+  
+  </div> 

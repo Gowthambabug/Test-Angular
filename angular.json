@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-phone-book"
+    }
+  },
+  "defaultProject": "angular-phone-book",
+  "cli": {
+    "analytics": "99590bb1-255f-4d31-aeb7-b069141c5372"
+  }
 }
