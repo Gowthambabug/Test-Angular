@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PhoneModule } from './phone/phone-form/phone-module';
 import { Routes, RouterModule } from '@angular/router';
+import { UserFormModule } from './Login/userform/userform.module';
 
 const routes: Routes = [
   { path: '', redirectTo: '/PhoneForm', pathMatch: 'full' }
@@ -13,14 +14,16 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
     
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
     AppRoutingModule,
-    PhoneModule
+    PhoneModule,
+    UserFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

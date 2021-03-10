@@ -1,0 +1,21 @@
+<form #UserForm="ngForm" >
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td>
+                <input [(ngModel)]="formData.firstname" name="firstname" type="text" class="form-control" id="firstname" required>
+            </td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>
+             <input [(ngModel)]="formData.lastname" name="lastname" type="text" class="form-control" id="lastname" required>
+            </td>
+            
+        </tr>
+        </table>
+        <div>
+            <button (click)="onSubmit()" type="submit" [disabled]= "!UserForm.form.valid">Generate</button>
+            <span>{{this.Output}}</span>
+        </div>
+    </form>
